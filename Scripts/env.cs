@@ -65,9 +65,13 @@ namespace CandyCoded.env
         public static bool TryParseEnvironmentVariable(string key, out string value)
         {
 
-            value = variables[key];
+            if(variables.ContainsKey(key))
+            {
+                value = variables[key];
+                return true;
+            }
 
-            return variables.ContainsKey(key);
+            return false;
 
         }
 
