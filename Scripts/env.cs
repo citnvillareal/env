@@ -71,6 +71,7 @@ namespace CandyCoded.env
                 return true;
             }
 
+            value = null;
             return false;
 
         }
